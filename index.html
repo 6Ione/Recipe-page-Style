@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Young+Serif&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Recipe page</title>
+
+  <style>
+    .attribution { font-size: 0.6875rem; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    .body{
+      font-family: 'outfit', sans-serif;
+      font-weight: 400, 600, 700;
+      background-color: hsl(30, 54%, 90%);
+      margin: 0;
+      padding: 120px 0;
+    }
+
+    h1, h2 {
+      font-family: 'Young Serif', serif;
+      font-weight: 400;
+      color: hsl(14, 45%, 36%)
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;      
+    }
+
+    .card {
+      background-color: white;
+      max-width: 700px;
+      padding: 35px;
+      border-radius: 20px;
+    }
+
+    .card-image img {
+      display: block;
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .card-recipe-name p, .card-ingredients li, .card-nutritions p {
+      color: hsl(30, 10%, 34%)
+    }
+
+    .card-recipe-name h1 {
+      color: hsl(24, 5%, 18%);
+      font-size: 2.5em;
+    }
+    
+    .card-recipe-name p {
+      font-size: 1.1rem;
+    }
+
+    .card-prep-time {
+      background-color: hsl(330, 100%, 98%);
+      border-radius: 20px;
+      padding: 25px;
+      padding-top: 10px;
+      margin-top: 30px;
+    }
+    .card-prep-time h1 {
+      color: hsl(332, 51%, 32%);
+      font-family: 'outfit', sans-serif;
+      font-weight: 520;
+    }
+
+    /* mobile viewport */
+    @media (max-width: 375px) {
+      .body {
+        padding: 0;
+        margin: 0;
+      }
+
+      .card {
+        max-width: 100%;
+        padding: 0;
+        border-radius: 0;
+        margin: 0;
+      }
+      
+      .card-image img {
+        border-radius: 0;
+    }
+  }
+  </style>
+</head>
+<body class="body">
+  <main>
+    <div class="container">
+      <div class="card">
+        <div class="card-image">
+          <img src="./assets/images/image-omelette.jpeg">
+        </div>
+
+        <div class="card-recipe-name">
+          <h1>Simple Omelette Recipe</h1>
+          <p> An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked 
+              to perfection, optionally filled with your choice of cheese, vegetables, or meats.</p>
+        </div>
+
+        <div class="card-prep-time">
+          <h1>Perparation time</h1>
+          <ul>
+            <li>Total: Approximately 10 minutes</li>
+            <li>Preparation: 5 minutes</li>
+            <li>Cooking: 5 minutes</li>
+          </ul>
+        </div>
+
+        <div class="card-ingredients">
+          <h1>Ingredients</h1>
+          <ul>
+            <li>2-3 large eggs</li>
+            <li>Salt, to taste</li>
+            <li>Pepper, to taste</li>
+            <li>1 tablespoon of butter or oil</li>
+            <li>Optional fillings: cheese, diced vegetables, cooked meats, herbs</li>
+          </ul>
+        </div>
+
+        <div class="card-instructions">
+          <h1>Instructions</h1>
+          <ul>
+            <li>Beat the eggs: In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed. 
+                You can add a tablespoon of water or milk for a fluffier texture.</li>
+            <li>Heat the pan: Place a non-stick frying pan over medium heat and add butter or oil.</li>
+            <li>Cook the omelette: Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure 
+                the eggs evenly coat the surface.</li>
+            <li>Add fillings (optional): When the eggs begin to set at the edges but are still slightly runny in the 
+                middle, sprinkle your chosen fillings over one half of the omelette.</li>
+            <li>Fold and serve: As the omelette continues to cook, carefully lift one edge and fold it over the 
+                fillings. Let it cook for another minute, then slide it onto a plate.</li>
+            <li>Enjoy: Serve hot, with additional salt and pepper if needed.</li>
+          </ul>
+        </div>
+
+        <div class="card-nutritions">
+          <h1>Nutrition</h1>
+          <p>The table below shows nutritional values per serving without the additional fillings.</p>
+            <table>
+              <tr>
+                <td>Calories</td>
+                <td><strong>277kcal</strong></td>
+              </tr>
+              <tr>
+                <td>Carbs</td>
+                <td><strong>0g</strong></td>
+              </tr>
+              <tr>
+                <td>Protein</td>
+                <td><strong>20g</strong></td>
+              </tr>
+              <tr>
+                <td>Fat</td>
+                <td><strong>22g</strong></td>
+              </tr>
+            </table>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">capo</a>.
+  </footer>
+</body>
+</html>
