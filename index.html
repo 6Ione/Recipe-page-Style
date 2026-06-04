@@ -115,59 +115,31 @@
       color: hsl(14, 45%, 36%);
       padding: 240px;
     }
-    /* ── Tablet and up: desktop card layout ── */
-    @media (min-width: 375px) {
-      .body {
-        padding: 80px 0;
-      }
-    }
- 
-    /* ── Mobile: phones only (up to 599px) ── */
-    @media (max-width: 1440px) {
+    /* mobile viewport */
+    @media (max-width: 375px) {
       .body {
         padding: 0;
-        background-color: white;
+        margin: 0;
       }
- 
-      .container {
-        display: block;
-      }
- 
-      .card {
 
+      .card {
+        max-width: 100%;
+        padding: 0px;
         border-radius: 0;
-        padding: 0 0 32px;
+        margin: 0;
       }
- 
+      
       .card-image img {
         border-radius: 0;
-      }
- 
-      .card-recipe-name {
-        padding: 0 28px;
-        margin-top: 28px;
-      }
- 
-      .card-prep-time {
-        margin: 24px 28px 0;
-        border-radius: 12px;
-      }
- 
-      .card-ingredients, .card-instructions, .card-nutritions {
-        padding: 0 28px;
-      }
- 
-      hr {
-        margin: 0 28px;
-      }
-
-      .card-nutritions {
-        padding: 0 28px;
-      }
-      .card-recipe-name h1 {
-        font-size: 2rem;
-      }
     }
+
+    .card-prep-time {
+      padding: 15px;
+    }
+    .card-ingredients {
+      padding: 15px;
+    }
+  }
   </style>
 </head>
 <body class="body">
