@@ -26,6 +26,13 @@
       color: hsl(14, 45%, 36%)
     }
 
+    hr {
+      opacity: 40%;
+    }
+    li::marker {
+      color: hsl(14, 45%, 36%);
+    }
+
     .container {
       display: flex;
       justify-content: center;      
@@ -67,27 +74,100 @@
     .card-prep-time h1 {
       color: hsl(332, 51%, 32%);
       font-family: 'outfit', sans-serif;
-      font-weight: 520;
+      font-size: 1.3rem;
+      padding: 0 15px;
     }
 
-    /* mobile viewport */
-    @media (max-width: 375px) {
+    .card-prep-time li{
+      color: hsl(30, 10%, 34%);
+      padding-left: 20px;
+      padding-bottom: 10px;
+    }
+
+    .card-ingredients li {
+      padding-left: 20px;
+      padding-bottom: 10px;
+    }
+
+    .card-instructions li {
+      list-style-type: decimal;
+      color: hsl(30, 10%, 34%);
+      padding-left: 20px;
+      padding-bottom: 10px;
+    }
+    .card-instructions li::marker {
+          font-weight: 600;
+    }
+
+    .card-nutritions table {
+      color: hsl(30, 10%, 34%);
+    }
+    .card-nutritions th {
+      padding: 20px;
+    }
+    .card-nutritions td, .card-nutritions tr {
+      text-align: left;
+      padding: 15px;
+      border-bottom: 1px solid #ddd;
+      margin: 0;
+    }
+    .card-nutritions strong {
+      color: hsl(14, 45%, 36%);
+      padding: 240px;
+    }
+    /* ── Tablet and up: desktop card layout ── */
+    @media (min-width: 375px) {
+      .body {
+        padding: 80px 0;
+      }
+    }
+ 
+    /* ── Mobile: phones only (up to 599px) ── */
+    @media (max-width: 1440px) {
       .body {
         padding: 0;
-        margin: 0;
+        background-color: white;
       }
-
+ 
+      .container {
+        display: block;
+      }
+ 
       .card {
-        max-width: 100%;
-        padding: 0;
+
         border-radius: 0;
-        margin: 0;
+        padding: 0 0 32px;
       }
-      
+ 
       .card-image img {
         border-radius: 0;
+      }
+ 
+      .card-recipe-name {
+        padding: 0 28px;
+        margin-top: 28px;
+      }
+ 
+      .card-prep-time {
+        margin: 24px 28px 0;
+        border-radius: 12px;
+      }
+ 
+      .card-ingredients, .card-instructions, .card-nutritions {
+        padding: 0 28px;
+      }
+ 
+      hr {
+        margin: 0 28px;
+      }
+
+      .card-nutritions {
+        padding: 0 28px;
+      }
+      .card-recipe-name h1 {
+        font-size: 2rem;
+      }
     }
-  }
   </style>
 </head>
 <body class="body">
@@ -105,11 +185,11 @@
         </div>
 
         <div class="card-prep-time">
-          <h1>Perparation time</h1>
+          <h1><strong>Preparation time</strong></h1>
           <ul>
-            <li>Total: Approximately 10 minutes</li>
-            <li>Preparation: 5 minutes</li>
-            <li>Cooking: 5 minutes</li>
+            <li><strong>Total:</strong> Approximately 10 minutes</li>
+            <li><strong>Preparation:</strong> 5 minutes</li>
+            <li><strong>Cooking:</strong> 5 minutes</li>
           </ul>
         </div>
 
@@ -123,43 +203,51 @@
             <li>Optional fillings: cheese, diced vegetables, cooked meats, herbs</li>
           </ul>
         </div>
-
+        <hr>
         <div class="card-instructions">
           <h1>Instructions</h1>
           <ul>
-            <li>Beat the eggs: In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed. 
+            <li><strong>Beat the eggs:</strong> In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed. 
                 You can add a tablespoon of water or milk for a fluffier texture.</li>
-            <li>Heat the pan: Place a non-stick frying pan over medium heat and add butter or oil.</li>
-            <li>Cook the omelette: Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure 
+            <li><strong>Heat the pan:</strong> Place a non-stick frying pan over medium heat and add butter or oil.</li>
+            <li><strong>Cook the omelette:</strong> Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure 
                 the eggs evenly coat the surface.</li>
-            <li>Add fillings (optional): When the eggs begin to set at the edges but are still slightly runny in the 
+            <li><strong>Add fillings (optional):</strong> When the eggs begin to set at the edges but are still slightly runny in the 
                 middle, sprinkle your chosen fillings over one half of the omelette.</li>
-            <li>Fold and serve: As the omelette continues to cook, carefully lift one edge and fold it over the 
+            <li><strong>Fold and serve:</strong> As the omelette continues to cook, carefully lift one edge and fold it over the 
                 fillings. Let it cook for another minute, then slide it onto a plate.</li>
-            <li>Enjoy: Serve hot, with additional salt and pepper if needed.</li>
+            <li><strong>Enjoy:</strong> Serve hot, with additional salt and pepper if needed.</li>
           </ul>
         </div>
-
+        <hr>
         <div class="card-nutritions">
           <h1>Nutrition</h1>
           <p>The table below shows nutritional values per serving without the additional fillings.</p>
             <table>
-              <tr>
-                <td>Calories</td>
-                <td><strong>277kcal</strong></td>
-              </tr>
-              <tr>
-                <td>Carbs</td>
-                <td><strong>0g</strong></td>
-              </tr>
-              <tr>
-                <td>Protein</td>
-                <td><strong>20g</strong></td>
-              </tr>
-              <tr>
-                <td>Fat</td>
-                <td><strong>22g</strong></td>
-              </tr>
+              <thead>
+                <tr>
+                  <td>Calories</td>
+                  <td><strong>277kcal</strong></td>
+                </tr>
+              </thead>
+              <thead>
+                <tr>
+                  <td>Carbs</td>
+                  <td><strong>0g</strong></td>
+                </tr>
+              </thead>
+              <thead>
+                <tr>
+                  <td>Protein</td>
+                  <td><strong>20g</strong></td>
+                </tr>
+              </thead>
+              <thead>
+                <tr>
+                  <td>Fat</td>
+                  <td><strong>22g</strong></td>
+                </tr>
+              </thead>
             </table>
         </div>
       </div>
